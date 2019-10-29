@@ -3,12 +3,23 @@ const readlineSync = require("readline-sync");
 const MIN = 0.01;
 const MAX = 0.99;
 
-const amount = Number(readlineSync.question("\nEnter a dollar amount: "));
+const Amount = Number(readlineSync.question("\nEnter a dollar amount: "));
 
-if (Number.isNaN(amount)) {
-    // print your error message here
-} else if (amount < MIN || amount > MAX) {
-    // print your error message here
+if (Number.isNaN(Amount)) {
+    console.log("Invalid")
+} else if (Amount < MIN || Amount > MAX) {
+    console.log("Invalid")
 } else {
-    // write your code for making change here
+    const Qval=0.25
+    const Dval=0.10
+    const Nval=0.05
+    const Pval=0.01
+    let Q=Math.floor(Amount/Qval)
+    let Minus_q=Amount-(Q*0.25)
+    let D=Math.floor(Minus_q/Dval)
+    let Minus_d=Minus_q-(D*0.1)
+    let N=Math.floor(Minus_d/Nval)
+    let Minus_n=Minus_d-(N*0.05)
+    let P=Math.ceil(Minus_n/Pval)
+    console.log("\n"+Q + " quarters, "+ D + " dimes, "+ N + " nickels, and "+ P +" pennies.")
 }
