@@ -21,5 +21,6 @@ if (Number.isNaN(Amount)) {
     let N=Math.floor(Minus_d/Nval)
     let Minus_n=Minus_d-(N*0.05)
     let P=Math.ceil(Minus_n/Pval)
+
     console.log("\n"+Q + " quarters, "+ D + " dimes, "+ N + " nickels, and "+ P +" pennies.")
 }
