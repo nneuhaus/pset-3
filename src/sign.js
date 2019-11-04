@@ -2,15 +2,15 @@ const readlineSync = require("readline-sync");
 const MIN = -9007199254740991;
 const MAX = 9007199254740991;
 
-const Number = readlineSync.question("\nEnter a number: ");
+const Number = readlineSync.question("\nEnter a number: \n");
 if (Number.isNaN) {
-    console.log("Invalid");
+    console.log("\nInvalid");
 } else if (Number < MIN || Number > MAX) {
-    console.log("Invalid");
+    console.log("\nInvalid.");
 } else if (Number>0){
-  console.log("Positive");
+  console.log("\nPositive.");
 } else if (Number<0){
-  console.log("Negative");
+  console.log("\nNegative.");
 } else {
-  console.log("Zero");
+  console.log("\nZero.");
 }
