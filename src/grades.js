@@ -7,11 +7,7 @@ Grade=readlineSync.question("\nEnter a grade:\n")
 
 if (Grade<MIN || Grade>MAX){
   console.log("\nInvalid.")
-}
-else if (Grade.NaN) {
-  console.log("\nInvalid.")
-}
-else if (Grade>=90) {
+} else if (Grade>=90) {
   console.log("\nYou recieved an A\n")
 }
 else if ( Grade <=89 && Grade >=80){
@@ -24,4 +20,7 @@ else if (Grade <=69 && Grade>=60) {
 console.log("\nYou recieved a D\n")
 }
 else if (Grade<=59 && Grade>=0) {
-console.log("\nYou recieved a F\n")};
+console.log("\nYou recieved a F\n")
+} else {
+  console.log("\nInvalid.")
+}
