@@ -13,7 +13,7 @@ if (Num2.isNaN)
 {
 console.log("Invalid.")
 }
-if (Num2.isNaN)
+if (Num3.isNaN)
 {
 console.log("Invalid.")
 }
