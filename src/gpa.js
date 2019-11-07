@@ -1,40 +1,43 @@
 const readlineSync = require("readline-sync");
 
-let Grade = readlineSync.question("\nEnter an letter grade: ");
-let Gradelength = Grade.length();
-let GradeNumber = 0;
+const Letter = String(readlineSync.question("\nEnter a letter grade: "));
 
-switch (Grade.charAt(0)) {
-  case 'A':
-    GradeNumber = 4;
+if (Letter == "A+" || Letter == "A" || Letter == "a+" || Letter == "a") {
+      console.log("\nYour GPA is 4.00.\n")
 
+} else if  (Letter == "A-" || Letter == "a-") {
+      console.log("\nYour GPA is 3.67.\n")
+
+} else if  (Letter == "B+" || Letter == "b+") {
+      console.log("\nYour GPA is 3.33.\n")
+
+} else if  (Letter == "B"  || Letter == "b") {
+      console.log("\nYour GPA is 3.00.\n")
+
+} else if  (Letter == "B-" || Letter == "b-") {
+      console.log("\nYour GPA is 2.67.\n")
+
+} else if  (Letter == "C+" || Letter == "c+") {
+      console.log("\nYour GPA is 2.33.\n")
+
+} else if  (Letter == "C"  || Letter == "c") {
+      console.log("\nYour GPA is 2.00.\n")
+
+} else if  (Letter == "C-" || Letter == "c-") {
+      console.log("\nYour GPA is 1.67.\n")
+
+} else if  (Letter == "D+" || Letter == "d+") {
+      console.log("\nYour GPA is 1.33.\n")
+
+} else if  (Letter == "D"  || Letter == "d") {
+      console.log("\nYour GPA is 1.00.\n")
+
+} else if  (Letter == "D-" || Letter == "d-") {
+      console.log("\nYour GPA is 0.67.\n")
+
+} else if  (Letter == "F"  || Letter == "f") {
+      console.log("\nYour GPA is 0.00.\n")
+
+} else {
+      console.log("\nInvalid.\n")
 }
-if (Gradelength==2) {
-  switch (Grade.charAt(1)) {
-    case '+':
-      GradeNumber = GradeNumber + 0.33;
-
-    case '-':
-      GradeNumber = GradeNumber - 0.33;
-
-  }
-}
-else if (Gradelength==1){
-
-}
-else {
-  console.log("Invalid.")
-}
-switch (Grade.charAt(0)) {
-  case 'B':
-    GradeNumber = 3; }
-
-switch (Grade.charAt(0)) {
-  case 'C':
-        GradeNumber = 2; }
-
-switch (Grade.charAt(0)) {
-    case 'C':
-          GradeNumber = 2; }
-
-console.log("Your gpa is" + GradeNumber)
